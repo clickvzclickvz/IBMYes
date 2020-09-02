@@ -45,5 +45,5 @@ jobs:
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -r eu-gb
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target -g "$RESOURSE_ID"
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud target --cf
-        /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf install
+        /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf install -v 6.51.0
         /home/runner/work/IBMYes/IBMYes/IBM_Cloud_CLI/ibmcloud cf push
