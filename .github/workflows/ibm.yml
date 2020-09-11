@@ -1,13 +1,13 @@
 
-name: IBM Cloud Auto Restart
+#name: IBM Cloud Auto Restart
 
-on:
+#on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-  schedule:
-    - cron: '00 22 * * *'
+  #schedule:
+    #- cron: '00 22 * * *'
 
 jobs:
   ibm-cloud-restart:
@@ -35,7 +35,7 @@ jobs:
         IBM_APP_NAME: ${{ secrets.IBM_APP_NAME }}
       run: |
         rm -rf v2ray-cloudfoundry
-        git clone https://github.com/clickvzclickvz/v2ray-cloudfoundry.git
+        git clone https://github.com/clickvzclickvz/2-cloudfoundry.git
         chmod +x /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/v2ray/*
         cd v2ray-cloudfoundry
         sed -i "s/GetStartedGo/${{ secrets.IBM_APP_NAME }}/g"  /home/runner/work/IBMYes/IBMYes/v2ray-cloudfoundry/manifest.yml
